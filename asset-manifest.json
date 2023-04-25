@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/finances-planner/static/css/main.b5320759.css",
+    "main.js": "/finances-planner/static/js/main.8dc86c64.js",
+    "index.html": "/finances-planner/index.html",
+    "main.b5320759.css.map": "/finances-planner/static/css/main.b5320759.css.map",
+    "main.8dc86c64.js.map": "/finances-planner/static/js/main.8dc86c64.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b5320759.css",
+    "static/js/main.8dc86c64.js"
+  ]
+}
