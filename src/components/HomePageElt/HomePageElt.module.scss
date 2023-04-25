@@ -1,0 +1,271 @@
+@import '../../sass/utils/mixin';
+@import '../../sass/utils/variables';
+
+.homeTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+
+  margin-top: 60px;
+  margin-bottom: 124px;
+
+  width: 314px;
+  height: 68px;
+
+  font-family: 'Unbounded';
+  font-style: normal;
+  @include font(500, 24px, 1.42);
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+
+  @include tablet {
+    margin-top: 72px;
+
+    width: 646px;
+    height: 190px;
+
+    @include font(500, 44px, 1.27);
+  }
+
+  @include desktop {
+    margin-top: 142px;
+  }
+}
+
+.homeTitleAccent {
+  display: flex;
+
+  padding: 10px 20px;
+  line-height: 28px;
+
+  background: $blue;
+  border-radius: 60px;
+
+  @include tablet {
+    display: inline-block;
+    padding: 10px 24px;
+    line-height: 48px;
+  }
+}
+
+.imgWrap {
+  position: absolute;
+  overflow: hidden;
+  width: 481px;
+  width: 100%;
+  height: 433px;
+  right: 50%;
+  bottom: 0;
+
+  @include tablet {
+    width: 656px;
+    height: 566px;
+  }
+  @include desktop_max {
+    transform: translateX(50%);
+  }
+  @include desktop {
+    width: 690px;
+    height: 595px;
+    left: 46%;
+  }
+}
+
+.imgOuterRound {
+  position: absolute;
+  width: 481px;
+  height: 481px;
+  bottom: -124px;
+  right: 50%;
+  transform: translateX(50%);
+
+  border-radius: 50%;
+  z-index: 1;
+  background: linear-gradient(
+    212.28deg,
+    rgba(58, 106, 245, 0.7) 9.2%,
+    rgba(0, 0, 0, 0.7) 97.4%
+  );
+  @include tablet {
+    width: 630px;
+    height: 630px;
+    bottom: -164px;
+    right: 48%;
+  }
+  @include desktop {
+    bottom: -135px;
+    right: 47%;
+  }
+}
+
+.imgInnerRound {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+
+  background: radial-gradient(
+    63.33% 63.33% at 34.17% 36.67%,
+    #6c92f3 0%,
+    #1d03bd 100%
+  );
+  border-radius: 50%;
+}
+
+.imgRoundWhite {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 159px;
+  top: -56px;
+  border-radius: 50%;
+
+  background: $white;
+
+  @include tablet {
+    width: 26px;
+    height: 26px;
+    right: 31%;
+    top: -12%;
+  }
+}
+
+.imgRoundGrad {
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  right: 53px;
+  top: -32px;
+  border-radius: 50%;
+  background: linear-gradient(
+    214.51deg,
+    rgba(88, 104, 223, 0.5) 9.68%,
+    rgba(0, 0, 0, 0.5) 132.56%
+  );
+
+  @include tablet {
+    width: 74px;
+    height: 74px;
+    right: 69px;
+    top: -43px;
+  }
+}
+
+.homeImg {
+  overflow: hidden;
+  position: absolute;
+  width: 349px;
+  height: 454px;
+  right: 66px;
+  bottom: 110px;
+
+  z-index: 5;
+  background-image: url(../../assets/images/hero-mobile.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: contain;
+  @include retina {
+    background-image: url(../../assets/images/hero-mobile-2x.png);
+  }
+
+  @include tablet {
+    width: 438px;
+    height: 569px;
+    right: 19%;
+    bottom: 135px;
+
+    background-image: url(../../assets/images/hero-tablet.png);
+    @include retina {
+      background-image: url(../../assets/images/hero-tablet-2x.png);
+    }
+  }
+
+  @include desktop {
+    width: 438px;
+    height: 569px;
+    background-image: url(../../assets/images/hero-desktop.png);
+    @include retina {
+      background-image: url(../../assets/images/hero-desktop-2x.png);
+    }
+  }
+}
+
+.textPaiments {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 197px;
+  height: 34px;
+  left: 66px;
+  top: 151px;
+  color: $white;
+  font-style: normal;
+  @include font(600, 14px, 1.3);
+
+  text-align: center;
+  letter-spacing: -0.02em;
+
+  background: rgba(243, 243, 243, 0.053);
+  backdrop-filter: blur(21.47px);
+  border-radius: 31px;
+  z-index: 10;
+
+  @include tablet {
+    width: 283px;
+    height: 56px;
+    left: -9px;
+    top: 201px;
+
+    @include font(600, 20px, 1.2);
+  }
+
+  @include desktop {
+    left: -49px;
+    top: 212px;
+  }
+}
+.textAppartments {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 197px;
+  height: 34px;
+  right: 88px;
+  bottom: 189px;
+
+  color: $white;
+  @include font(600, 14px, 1.3);
+
+  text-align: center;
+  letter-spacing: -0.02em;
+
+  background: rgba(243, 243, 243, 0.053);
+  backdrop-filter: blur(21.47px);
+  border-radius: 31px;
+  z-index: 10;
+
+  @include tablet {
+    width: 283px;
+    height: 56px;
+    right: 73px;
+    bottom: 240px;
+
+    @include font(600, 20px, 1.2);
+  }
+
+  @include desktop {
+    right: 90px;
+    bottom: 241px;
+  }
+}
+
+.textPaimentsAccent {
+  color: $blue;
+  padding: 0 10px;
+}

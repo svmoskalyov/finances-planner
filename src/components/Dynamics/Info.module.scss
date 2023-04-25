@@ -1,0 +1,273 @@
+@import "../../sass/utils/mixin";
+@import "../../sass/utils/variables";
+
+.infoContainer{
+    @include tablet {
+        width: 225px;
+        margin-top: 66px;
+    }
+
+    @include desktop {
+        width: 500px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    @include desktop {
+        height: 209px;
+        width: 570px;
+        order: 2;
+        position: relative;
+        justify-content: space-between;
+    }
+}
+
+
+.title{
+    margin: 0;
+    margin-bottom: 32px;
+
+    @include font (400, 12px, 12px);
+    color: $white;
+    opacity: 0.87;
+
+    @include tablet {
+        margin-bottom: 50px;
+    }
+}
+
+.list{
+    padding: 0;
+    list-style: none;
+    
+    @include tablet-max {
+        min-width: 250px;
+        max-width: 263px;
+    }
+
+    @include desktop {
+        width: 250px;
+    }
+}
+
+.item{
+    margin-bottom: 28px;
+    display: flex;
+    justify-content: space-between;
+
+    &:not(:last-child){
+        margin-bottom: 7px;
+    }
+}
+
+.text{
+    margin: 0;
+
+    @include font (400, 14px, 16.8px);
+    letter-spacing: 0.02em;
+
+    color: rgba(243, 243, 243, 0.4);
+}
+
+.num{
+    margin: 0;
+
+    @include font (700, 14px, 16.8px);
+    letter-spacing: 0.02em;
+
+    color: $white;
+}
+
+.barTitle{
+    margin: 0;
+    margin-bottom: 8px;
+
+    @include font (400, 16px, 19px);
+    letter-spacing: -0.125714px;
+
+    color: $white;
+}
+
+.bar{
+    margin-bottom: 50px;
+    height: 8px;
+    width: 100%;
+
+    background-color: $white;
+    border-radius: 4px;
+
+    @include tablet {
+        height: 5px;
+    }
+}
+
+.barFill{
+    height: 8px;
+    border-radius: 4px;
+
+    background-color: $blue;
+
+    @include tablet {
+        height: 5px;
+    }
+}
+
+.imageElement{
+    position: relative;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 16px;
+
+    @include tablet-max {
+        margin-bottom: 36px;
+        min-width: 250px;
+        max-width: 343px;
+
+    }
+
+    @include tablet {
+        width: 225px;
+    }
+    
+    @include desktop {
+        margin-bottom: 22px;
+        width: 254px;
+    }
+}
+
+.imageContainer{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    background-color: #1F2534;
+
+    object-fit: contain;
+
+    border-radius: 16px;
+    @include tablet-max {
+        height: 260px;
+        min-width: 250px;
+        max-width: 343px;
+    }
+
+    @include tablet {
+        width: 225px;
+        height: 166px;
+    }
+    
+    @include desktop {
+        width: 254px;
+        height: 209px;
+    }
+}
+.image{
+    max-width: 100%;
+}
+
+.imageBtn{
+    margin-top: 8px;
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    cursor: pointer;
+    @include font (700, 14px, 20px);
+
+    &:hover{
+        color: #6786ce;
+    }
+}
+
+.accRemain{
+    margin: auto;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #1F2534;
+    border-radius: 16px;
+
+    @include tablet-max {
+        min-width: 250px;
+        max-width: 343px;
+    }
+
+    @include tablet {
+        width: 672px;
+        height: 226px;
+        margin-bottom: 75px;
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 59px;
+    }
+
+    @include desktop {
+        margin: 0;
+        width: 570px;
+        height: 257px;
+        order: 3;
+        position: absolute;
+        transform: translate(105.5%, 130%);
+    }
+}
+
+.accTitleContainer{
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    @include tablet {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+}
+
+.accTitle{
+    width: 263px;
+    margin-bottom: 28px;
+
+    @include font (600, 20px, 24px);
+    letter-spacing: 0.02em;
+}
+
+.accSpan{
+    color: $blue;
+}
+
+.accNum{
+
+    font-size: 36;
+    line-height: calc(43/36);
+
+    @include font (700, 36px, 43px);
+    letter-spacing: 0.02em;
+
+    @include tablet {
+        @include font (700, 50px, 60px)
+    }
+}
+
+.svgContainer{
+    width: 185px;
+    height: 165px;
+    margin-bottom: 40px;
+    
+    background-image: url(../../assets/images/dynamics-planer.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @include retina {
+        background-image: url(../../assets/images/dynamics-planer-2x.png);
+    }
+    
+    @include tablet {
+        margin: 0;
+    }
+}

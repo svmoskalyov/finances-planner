@@ -1,0 +1,35 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  gap: 18px;
+  margin-bottom: 4px;
+
+  @media screen and (min-width: 768px) {
+    height: 314px;
+    gap: 32px;
+  }
+}
+
+.p {
+  display: flex;
+  margin-left: auto;
+  margin-bottom: 64px;
+  height: 42px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: rgba(243, 243, 243, 0.3);
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 100px;
+    width: 329px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-right: 220px;
+    margin-bottom: 28px;
+  }
+}

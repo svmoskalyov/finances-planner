@@ -1,0 +1,114 @@
+@import '../../../sass/utils/variables';
+
+.categoriesList {
+    overflow: hidden;
+    border-radius: 0px 16px 16px 16px;
+}
+
+.categoriesItem {
+    background-color: $dark-blue-tabl;
+
+    @media screen and (max-width: 767px) {
+        padding: 18px 16px;
+    }
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 24px 32px;
+        padding-right: 150px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 24px 32px;
+        padding-right: 215px;
+    }
+}
+
+.categoriesItemEl {
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (min-width: 768px) {
+        width: 382px;
+    }
+}
+
+.categoriesItem:not(:last-child) {
+    border-bottom: 1px solid $light-gray;
+}
+
+.categoriesDes {
+    color: $white;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.2;
+    
+    @media screen and (min-width: 768px) {
+        width: 177px;
+    }
+}
+
+.categoriesAmount {
+    color: $white;
+    line-height: 1.2;
+
+    @media screen and (max-width: 767px) {
+        font-weight: 400;
+        font-size: 18px;
+    }
+
+    @media screen and (min-width: 768px) {
+        font-weight: 600;
+        font-size: 20px;
+    }
+}
+
+.categoriesPerc {
+
+    font-weight: 400;
+    line-height: 1.2;
+    color: $light-gray-tabl;
+
+    @media screen and (max-width: 767px) {
+        margin-top: 8px;
+        font-size: 14px;
+    }
+
+    @media screen and (min-width: 768px) {
+        font-size: 18px; 
+    }
+}
+
+.noTransactionWrapper {
+    padding: 16px;
+    color: $white;
+    background-color: $dark-blue-tabl;
+    border-radius: 0px 16px 16px 16px;
+  
+    @media screen and (max-width: 767px) {
+        max-width: 343px;
+    }
+
+    @media screen and (min-width: 768px) {
+        width: 704px;
+    }
+  
+    @media screen and (min-width: 1280px) {
+      width: 769px;
+    }
+}
+
+.noTransactionText {
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.4;
+    text-align: center;
+}

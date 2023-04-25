@@ -1,0 +1,272 @@
+@import '../../../../sass/utils/variables';
+@import '../../../../sass/utils/mixin';
+
+.transactionList {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0px 16px 16px 16px;
+  background-color: rgb(37, 44, 65);
+  margin: 0 auto;
+  height: 476px;
+  overflow: auto;
+
+  @include tablet_max {
+    max-width: 343px;
+  }
+
+  @include tablet {
+    width: 704px;
+  }
+  @include desktop {
+    width: 769px;
+  }
+  &::-webkit-scrollbar {
+    width: 4px;
+    border-radius: 4px;
+    display: block;
+    margin: 10px 0;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $blue;
+    border-radius: 4px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}
+
+.formWrapper {
+  position: relative;
+  display: flex;
+
+  flex-direction: column;
+  background-color: #191d28;
+  box-shadow: 0px 24px 38px rgba(0, 0, 0, 0.14),
+    0px 9px 46px rgba(0, 0, 0, 0.12), 0px 11px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+
+  @include tablet_max {
+    padding: 50px 20px;
+    max-width: 315px;
+  }
+
+  @include tablet {
+    padding: 68px 34px;
+    width: 438px;
+  }
+}
+
+.formLabel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+  padding: 14px 18px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  line-height: 1.17;
+  color: rgba(243, 243, 243, 0.4);
+  background-color: rgba(37, 44, 65, 0.5);
+  border-radius: 16px;
+  width: 100%;
+
+  @include tablet_max {
+    font-size: 14px;
+  }
+
+  @include tablet {
+    font-size: 12px;
+  }
+}
+
+.formInput {
+  margin-top: 5px;
+  padding-left: 2px;
+  font-family: 'Lato', sans-serif;
+  @include font(400, 16px, 1.19);
+  color: $white;
+  background-color: transparent;
+  border: none;
+}
+
+.formInput:focus {
+  outline: transparent;
+}
+
+.formInput > option {
+  display: block;
+  font-family: 'Lato', sans-serif;
+  @include font(400, 16px, 1.19);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.19), 0px 6px 6px rgba(0, 0, 0, 0.26);
+  border-radius: 16px;
+  color: rgba(36, 36, 36, 1);
+  background-color: $white;
+}
+
+.buttonEdit {
+  font-family: 'Lato', sans-serif;
+  @include font(700, 14px, 1.43);
+  background-color: $blue;
+  color: $white;
+  border-radius: 60px;
+  border: none;
+  cursor: pointer;
+
+  @include tablet_max {
+    padding: 8px 56px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include tablet {
+    padding: 10px 62px;
+  }
+}
+
+.buttonCloseModal {
+  position: absolute;
+  top: 10px;
+  right: 18px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.noTransactionWrapper {
+  padding: 16px;
+  color: $white;
+  background-color: $dark-blue-tabl;
+  border-radius: 0px 16px 16px 16px;
+
+  @include tablet_max {
+    max-width: 343px;
+  }
+
+  @include tablet {
+    width: 704px;
+  }
+
+  @include desktop {
+    width: 769px;
+  }
+}
+
+.noTransactionText {
+  font-family: 'Lato', sans-serif;
+  @include font(500, 16px, 1.43);
+  text-align: center;
+}
+
+.dropdown .options div {
+  position: relative;
+  top: 4px;
+  font-size: 1.2em;
+  font-size: 16px;
+  line-height: 19px;
+}
+.overlayAddIncome {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modalWrapper {
+  width: 315px;
+  @include tablet {
+    width: 370px;
+  }
+  position: relative;
+
+  background-color: $dark-blue;
+  box-shadow: 0px 24px 38px rgba(0, 0, 0, 0.14),
+    0px 9px 46px rgba(0, 0, 0, 0.12), 0px 11px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+}
+.select-container {
+  .select {
+    &__control {
+      border: none;
+      box-shadow: none;
+      background-color: transparent;
+    }
+    &__indicator {
+      margin-top: -20px;
+      margin-right: 20px;
+      cursor: pointer !important;
+    }
+    &__indicator-separator {
+      background-color: transparent;
+    }
+    &__control {
+      margin-left: 16px;
+    }
+    &__single-value {
+      color: $white !important;
+      margin-top: -3px;
+    }
+    &__placeholder {
+      color: $white !important;
+    }
+    &__value-container {
+      padding: 0;
+    }
+
+    &__menu {
+      background-color: $white !important;
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.19),
+        0px 6px 6px rgba(0, 0, 0, 0.26);
+      border-radius: 16px !important;
+    }
+
+    &__option {
+      cursor: pointer;
+      border-radius: 10px;
+      border: none;
+      color: $dark-gray !important;
+      &--is-focused {
+        background-color: $white !important;
+      }
+      &--is-selected {
+        background-color: rgba(37, 44, 65, 0.5) !important;
+      }
+      @include font(400, 16px, 16px);
+    }
+  }
+}
+.labelForSelector {
+  background-color: rgba(37, 44, 65, 0.5);
+  border-radius: 16px;
+  margin-bottom: 18px;
+
+  @include desktop {
+    width: 370px;
+    height: 74px;
+    margin-bottom: 18px;
+  }
+}
+.labelText {
+  color: rgba(243, 243, 243, 0.4);
+  @include font(400, 12px, 14px);
+  padding: 14px 18px 0 18px;
+}
+.flex {
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.error {
+  position: absolute;
+  left: 20px;
+  top: 72px;
+  color: #ff2e00;
+}

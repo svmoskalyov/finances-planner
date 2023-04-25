@@ -1,0 +1,95 @@
+@import '../../sass/utils/variables';
+@import '../../sass/utils/mixin';
+
+.form {
+  display: flex;
+  width: 100%;
+  @include tablet_max {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  @include tablet {
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+  @include desktop {
+    margin-left: auto;
+    margin-right: auto;
+    width: 770px;
+    gap: 30px;
+  }
+}
+
+.lable {
+  border-radius: 16px;
+  background-color: rgba(37, 44, 65, 0.5);
+  color: rgba(243, 243, 243, 0.4);
+}
+
+.input {
+  @include tablet_max {
+    width: 100%;
+  }
+  @include tablet {
+    width: 336px;
+  }
+  @include desktop {
+    width: 370px;
+  }
+  background-color: transparent;
+
+  border: none;
+  border-radius: 16px;
+
+  @include font(400, 16px, 19px);
+
+  padding: 9px 18px 18px 18px;
+
+  color: $white;
+
+  &:focus {
+    border: none;
+    outline: none;
+  }
+  &::placeholder {
+    color: $white;
+    opacity: 1;
+  }
+}
+
+.inputTitle {
+  @include font(400, 12px, 14px);
+  padding: 14px 18px 0 18px;
+}
+
+.option {
+  @include font(400, 16px, 19px);
+  background-color: $white;
+  color: #242424;
+}
+
+.inputWrapper {
+  display: flex;
+  position: relative;
+  &:focus-within {
+    outline: 1px solid $blue;
+    border-radius: 16px;
+    & .inputTitle {
+      color: $blue;
+    }
+  }
+
+  @include tablet_max {
+    flex-direction: column;
+  }
+  @include tablet {
+    flex-wrap: wrap;
+  }
+}
+.errorSpan {
+  position: absolute;
+  color: red;
+  bottom: -20px;
+  left: 18px;
+}
