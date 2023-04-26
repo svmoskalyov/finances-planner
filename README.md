@@ -1,4 +1,4 @@
-# 📊💰 [FINANCES PLANNER](https://svmoskalyov.github.io/finances-planner)
+# 💰 [FINANCES PLANNER](https://svmoskalyov.github.io/finances-planner) 📊
 
 ## 📝 About website
 Used routing. Responsive layout of the website has been completed. Inputs have been validated. Availability of messages for the user. A ready-made backend was used. Loader, save to localhost, clsx library and other various libraries are involved.
