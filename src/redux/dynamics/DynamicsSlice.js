@@ -1,5 +1,9 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { getDynamics, getDynamicsByMonth, postImage } from "./dynamicsOperations";
+import { createSlice } from '@reduxjs/toolkit';
+import {
+  getDynamics,
+  getDynamicsByMonth,
+  postImage,
+} from './dynamicsOperations';
 import { logOutUser } from 'redux/auth/authOperations';
 
 const initialState = {
@@ -31,35 +35,33 @@ const initialState = {
 export const dynamicsSlice = createSlice({
   name: 'dynamics',
   initialState,
-  extraReducers: {
-    [getDynamics.pending](state, action) {
-      state.isLoading = true;
-
-    },
-    [getDynamics.fulfilled](state, { payload }) {
-
-      return {
-        ...state,
-        ...payload,
-        isLoading: false,
-        error: null,
-      };
-    },
-    [getDynamics.rejected](state, action) {
-      state.isLoading = false;
-      state.error = action.payload;
-    },
-    [postImage.fulfilled](state, action) {
-      state.flatImage = action.payload.image;
-    },
-    [getDynamicsByMonth.fulfilled](state, { payload }) {
-      state.statByMonth = payload;
-    },
-    [logOutUser.fulfilled](state, action) {
-      return initialState;
-    },
+  extraReducers: builder => {
+    builder
+      .addCase(getDynamics.pending, state => {
+        state.isLoading = true;
+      })
+      .addCase(getDynamics.fulfilled, (state, { payload }) => {
+        return {
+          ...state,
+          ...payload,
+          isLoading: false,
+          error: null,
+        };
+      })
+      .addCase(getDynamics.rejected, (state, { payload }) => {
+        state.isLoading = false;
+        state.error = payload;
+      })
+      .addCase(postImage.fulfilled, (state, { payload }) => {
+        state.flatImage = payload.image;
+      })
+      .addCase(getDynamicsByMonth.fulfilled, (state, { payload }) => {
+        state.statByMonth = payload;
+      })
+      .addCase(logOutUser.fulfilled, () => {
+        return initialState;
+      });
   },
 });
 
 export const dynamicsReducer = dynamicsSlice.reducer;
-
