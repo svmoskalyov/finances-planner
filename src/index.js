@@ -10,7 +10,7 @@ import './index.scss';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <Provider store={store}>
     <PersistGate loading={null} persistor={persistor}>
-      <BrowserRouter basename="/ITD-React-project">
+      <BrowserRouter basename="/finances-planner">
         <App />
       </BrowserRouter>
     </PersistGate>
