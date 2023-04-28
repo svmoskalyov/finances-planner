@@ -4,7 +4,7 @@
 Used routing. Responsive layout of the website has been completed. Inputs have been validated. Availability of messages for the user. A ready-made backend was used. Loader, save to localhost, clsx library and other various libraries are involved.
 
 ## 🛠 Technologies stack
-React, Redux, REST API, JavaScript, SASS/SCSS, HTML, Git/GitHub and librarys (axios, formik, yup e.t.c.)
+React, Redux, JavaScript, SASS/SCSS, HTML, Git/GitHub and librarys (axios, formik, yup e.t.c.)
 
 ---
 ### If cloned, it is necessary for the project to work
