@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/finances-planner/static/css/main.e10c3195.css",
-    "main.js": "/finances-planner/static/js/main.3aba68fc.js",
+    "main.js": "/finances-planner/static/js/main.c3096979.js",
     "static/css/119.ca6c9cc1.chunk.css": "/finances-planner/static/css/119.ca6c9cc1.chunk.css",
     "static/js/119.cd317c4f.chunk.js": "/finances-planner/static/js/119.cd317c4f.chunk.js",
     "static/css/338.6df4706a.chunk.css": "/finances-planner/static/css/338.6df4706a.chunk.css",
@@ -50,7 +50,7 @@
     "static/media/dynamics-planer.png": "/finances-planner/static/media/dynamics-planer.4f40508966748d7a90b6.png",
     "index.html": "/finances-planner/index.html",
     "main.e10c3195.css.map": "/finances-planner/static/css/main.e10c3195.css.map",
-    "main.3aba68fc.js.map": "/finances-planner/static/js/main.3aba68fc.js.map",
+    "main.c3096979.js.map": "/finances-planner/static/js/main.c3096979.js.map",
     "119.ca6c9cc1.chunk.css.map": "/finances-planner/static/css/119.ca6c9cc1.chunk.css.map",
     "119.cd317c4f.chunk.js.map": "/finances-planner/static/js/119.cd317c4f.chunk.js.map",
     "338.6df4706a.chunk.css.map": "/finances-planner/static/css/338.6df4706a.chunk.css.map",
@@ -73,6 +73,6 @@
   },
   "entrypoints": [
     "static/css/main.e10c3195.css",
-    "static/js/main.3aba68fc.js"
+    "static/js/main.c3096979.js"
   ]
 }
